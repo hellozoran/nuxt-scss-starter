@@ -14,7 +14,10 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: [
+    '~/assets/css/reset.css',
+    '~/assets/scss/main.scss'
+  ],
 
   styleResources: {
     scss: [
@@ -33,6 +36,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
