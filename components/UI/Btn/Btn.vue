@@ -56,6 +56,15 @@ export default {
     px-6
     py-2
     shadow-lg
-    rounded-sm;
+    rounded-sm
+    transition
+    duration-150;
+  &:focus {
+    @apply outline-none
+    shadow-outline
+  }
+  &:hover {
+    @apply bg-indigo-800
+  }
 }
 </style>
