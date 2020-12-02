@@ -47,6 +47,7 @@ export default {
 <style lang="scss" scoped>
 .button {
   @apply
+    inline-block
     text-white
     bg-indigo-500
     tracking-wider

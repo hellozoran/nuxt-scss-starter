@@ -1,13 +1,19 @@
 <template lang="html">
   <nav :class="isOpen ? 'open' : ''" class="nav">
-    <router-link
+    <nuxt-link
       v-for="page in nav"
       :key="page.label"
-      :to="{ name: page.to }"
+      :to="localePath({ name: page.to })"
       @click.native="$emit('itemClicked')"
     >
       {{ page.label }}
-    </router-link>
+    </nuxt-link>
+    <nuxt-link
+      v-for="locale in $i18n.locales"
+      :key="locale.code"
+      :to="switchLocalePath(locale.code)">
+      {{ locale.name }}
+    </nuxt-link>
   </nav>
 </template>
 
@@ -22,14 +28,8 @@ export default {
   data() {
     return {
       nav: [
-        {
-          label: 'Home',
-          to: 'index'
-        },
-        {
-          label: 'Page 2',
-          to: 'index'
-        }
+        { label: 'Home', to: 'index' },
+        { label: 'Sample page', to: 'sample' }
       ]
     }
   }
