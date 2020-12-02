@@ -55,8 +55,8 @@ export default {
     h-full
     hidden
     duration-300
-    flex-col;
-
+    flex-col
+    tracking-wide;
   &.open {
     @apply
       flex
@@ -84,7 +84,9 @@ export default {
   & a:link,
   & a:visited {
     @apply
-      ml-4;
+      ml-4
+      uppercase
+      text-sm;
   }
 }
 @keyframes fadein {
