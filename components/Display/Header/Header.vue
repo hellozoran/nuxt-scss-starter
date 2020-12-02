@@ -33,18 +33,17 @@ export default {
 <style lang="scss" scoped>
 .header {
   @apply
-    px-6
-    py-2
+    px-10
+    py-6
     flex
     items-center
     justify-between
-    text-brand-yellow
     w-full
     top-0
     left-0
     z-50;
 }
 .logo {
-  height: 4rem;
+  @apply h-10;
 }
 </style>

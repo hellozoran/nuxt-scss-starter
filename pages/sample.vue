@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="page">
+  <div class="page container">
     {{ $t('welcome') }}
   </div>
 </template>
@@ -11,5 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.page {}
+.page {
+  @apply mx-auto;
+}
 </style>

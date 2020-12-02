@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <div>
-      <Logo />
       <Heading :level="1" class="my-5">i18n + Tailwind</Heading>
       <Btn :to="localePath('sample')" class="mb-4">
         {{ $t('welcome') }}
@@ -18,6 +17,6 @@ export default {
 
 <style>
 .home {
-  @apply min-h-screen flex items-center justify-center flex-col text-center;
+  @apply flex items-center justify-center flex-col text-center min-h-screen;
 }
 </style>

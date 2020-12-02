@@ -2,7 +2,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand-yellow': '#EACF4A'
+        'brand-yellow': 'var(--brand-yellow)'
       }
     },
     darkSelector: '.dark-mode'
