@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="home">
     <div>
       <Logo />
       <Heading :level="1" class="my-5">i18n + Tailwind</Heading>
@@ -17,12 +17,7 @@ export default {
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.home {
+  @apply min-h-screen flex items-center justify-center flex-col text-center;
 }
 </style>
