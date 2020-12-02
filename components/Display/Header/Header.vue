@@ -1,6 +1,6 @@
 <template>
   <div class="header-wrapper">
-    <header class="header">
+    <header class="header border-gray-300 dark:border-gray-800 dark:bg-gray-900">
       <RouterLink :to="localePath('index')">
         <Logo class="logo" />
       </RouterLink>
@@ -39,7 +39,6 @@ export default {
     items-center
     justify-between
     border-b
-    border-gray-300
     text-brand-yellow
     w-full
     top-0

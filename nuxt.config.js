@@ -30,7 +30,8 @@ export default {
 
   buildModules: [
     '@nuxtjs/eslint-module',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode'
   ],
 
   modules: [
@@ -51,6 +52,15 @@ export default {
     vueI18n: {
       fallbackLocale: 'en'
     }
+  },
+
+  colorMode: {
+    preference: 'system', // default value of $colorMode.preference
+    fallback: 'dark'
+  },
+
+  purgeCSS: {
+    whitelist: ['dark-mode']
   },
 
   axios: {},

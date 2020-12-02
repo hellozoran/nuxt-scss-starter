@@ -1,5 +1,5 @@
 <template lang="html">
-  <component :is="tag" v-bind="attrs" class="button">
+  <component :is="tag" v-bind="attrs" class="btn">
     <slot />
   </component>
 </template>
@@ -45,11 +45,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.button {
+.btn {
   @apply
     inline-block
     text-white
-    bg-indigo-500
     tracking-wider
     font-semibold
     uppercase
@@ -59,7 +58,8 @@ export default {
     shadow-lg
     rounded-sm
     transition
-    duration-150;
+    duration-150
+    bg-indigo-400;
   &:focus {
     @apply outline-none
     shadow-outline
@@ -67,5 +67,8 @@ export default {
   &:hover {
     @apply bg-indigo-800
   }
+}
+.dark-mode .btn {
+  @apply bg-white text-gray-900;
 }
 </style>
