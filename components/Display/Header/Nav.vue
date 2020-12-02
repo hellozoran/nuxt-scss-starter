@@ -4,6 +4,7 @@
       v-for="page in nav"
       :key="page.label"
       :to="localePath({ name: page.to })"
+      class="text-gray-800 dark:text-white hover:text-grey-400 dark-hover:text-yellow"
       @click.native="$emit('itemClicked')"
     >
       {{ page.label }}
@@ -14,6 +15,7 @@
       :to="switchLocalePath(locale.code)">
       {{ locale.name }}
     </nuxt-link>
+    <ColorSwitcher />
   </nav>
 </template>
 
@@ -37,6 +39,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.nav.open {
+  @apply bg-white;
+}
+.dark-mode .nav.open {
+  @apply bg-gray-800;
+}
 .nav {
   @apply
     z-40
@@ -59,8 +67,7 @@ export default {
       right-0
       bottom-0
       w-full
-      h-full
-      bg-white;
+      h-full;
   }
 
   @screen md {
@@ -77,7 +84,6 @@ export default {
   & a:link,
   & a:visited {
     @apply
-      text-gray-600
       ml-4;
   }
 }

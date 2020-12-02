@@ -1,8 +1,8 @@
 <template lang="html">
   <button :class="isOpen ? 'active' : ''" type="button" class="menu-toggle" @click="$emit('toggle')">
-    <span />
-    <span />
-    <span />
+    <span class="bg-gray-800 dark:bg-gray-200" />
+    <span class="bg-gray-800 dark:bg-gray-200" />
+    <span class="bg-gray-800 dark:bg-gray-200" />
   </button>
 </template>
 
@@ -33,7 +33,6 @@ export default {
     @apply
       absolute
       block
-      bg-gray-800
       duration-150
       w-8;
     left: 50%;

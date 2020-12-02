@@ -6,12 +6,14 @@
       <Btn :to="localePath('sample')" class="mb-4">
         {{ $t('welcome') }}
       </Btn>
+      <p>color preference: {{ $colorMode.preference }}</p>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+}
 </script>
 
 <style>
