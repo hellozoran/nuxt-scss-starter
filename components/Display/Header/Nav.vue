@@ -3,7 +3,7 @@
     <router-link
       v-for="page in nav"
       :key="page.label"
-      :to="{ name: page.to }"
+      :to="localePath({ name: page.to })"
       @click.native="$emit('itemClicked')"
     >
       {{ page.label }}
