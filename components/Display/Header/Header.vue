@@ -1,7 +1,7 @@
 <template>
   <div class="header-wrapper">
     <header class="header">
-      <RouterLink :to="{ name: 'index' }">
+      <RouterLink :to="localePath('index')">
         <Logo class="logo" />
       </RouterLink>
       <HamburgerIcon :isOpen="isOpen" @toggle="toggleMenu" />

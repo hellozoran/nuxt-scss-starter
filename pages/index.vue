@@ -2,9 +2,9 @@
   <div class="container">
     <div>
       <Logo />
-      <Heading :level="1" class="my-5">Nuxt + Tailwind + SCSS starter</Heading>
-      <Btn :to="{ name: 'index' }">
-        Button example
+      <Heading :level="1" class="my-5">i18n + Tailwind</Heading>
+      <Btn :to="localePath('sample')" class="mb-4">
+        {{ $t('welcome') }}
       </Btn>
     </div>
   </div>

@@ -40,9 +40,14 @@ export default {
   ],
 
   i18n: {
-    locales: ['en', 'fr', 'es'],
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' },
+      { code: 'fr', iso: 'fr-FR', file: 'fr.json', name: 'French' },
+      { code: 'es', iso: 'es-ES', file: 'es.json', name: 'Spanish' }
+    ],
     defaultLocale: 'en',
-    localeDir: 'locales',
+    lazy: true,
+    langDir: 'locales/',
     vueI18n: {
       fallbackLocale: 'en'
     }
