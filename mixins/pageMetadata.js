@@ -1,3 +1,5 @@
+import siteConfig from '~/config/siteConfig.json'
+
 export default {
   head() {
     return {
@@ -36,22 +38,22 @@ export default {
         {
           hid: 'twitter:creator',
           property: 'twitter:creator',
-          content: '@revolutionsrec2'
+          content: siteConfig.network.twitter
         },
         {
           hid: 'twitter:site',
           property: 'twitter:site',
-          content: '@revolutionsrec2'
+          content: siteConfig.network.twitter
         },
         {
           hid: 'twitter:title',
           property: 'twitter:title',
-          content: this.meta.title
+          content: this.meta.title || ''
         },
         {
           hid: 'twitter:description',
           property: 'twitter:description',
-          content: this.meta.description
+          content: this.meta.description || ''
         },
         {
           hid: 'twitter:image:src',
@@ -66,7 +68,7 @@ export default {
         {
           hid: 'twitter:domain',
           property: 'twitter:domain',
-          content: 'revolutionsrecords.com'
+          content: this.meta.url || 'site.com'
         }
       ]
     }
