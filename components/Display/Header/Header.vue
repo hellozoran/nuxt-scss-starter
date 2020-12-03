@@ -4,8 +4,8 @@
       <RouterLink :to="localePath('index')">
         <Logo class="logo" />
       </RouterLink>
-      <HamburgerIcon :isOpen="isOpen" @toggle="toggleMenu" />
-      <Nav :isOpen="isOpen" @itemClicked="closeMenu" />
+      <HamburgerIcon :is-open="isOpen" @toggle="toggleMenu" />
+      <Nav :is-open="isOpen" @itemClicked="closeMenu" />
     </header>
   </div>
 </template>
