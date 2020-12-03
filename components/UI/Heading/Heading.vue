@@ -4,9 +4,7 @@ export default {
     return createElement(
       'h' + this.level,
       {
-        attrs: {
-          class: `heading ${this.font}`
-        }
+        class: `heading ${this.asClass}`
       },
       this.$slots.default
     )
@@ -16,22 +14,27 @@ export default {
       type: Number,
       required: true
     },
-    font: {
+    as: {
       type: String,
       required: false,
-      default: 'primary'
+      default: null
+    }
+  },
+  computed: {
+    asClass() {
+      return this.as ? this.as : `h${this.level}`
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  @apply text-6xl;
-}
-h2 {}
-h3 {}
-h4 {}
-h5 {}
-h6 {}
+h1, h2, h3, h4, h5, h6 {}
+
+.h1 { @apply text-6xl }
+.h2 { @apply text-4xl }
+.h3 {}
+.h4 {}
+.h5 {}
+.h6 {}
 </style>

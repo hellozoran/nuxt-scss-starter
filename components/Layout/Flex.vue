@@ -3,7 +3,7 @@ export default {
   render(createElement) {
     return createElement('div', 
       {
-        class: [`container`, 'mx-auto']
+        class: `flex`
       },
       this.$slots.default
     )
