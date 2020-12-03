@@ -5,8 +5,7 @@
       :key="page.label"
       :to="localePath({ name: page.to })"
       class="text-gray-800 dark:text-white hover:text-grey-400 dark-hover:text-yellow"
-      @click.native="$emit('itemClicked')"
-    >
+      @click.native="$emit('itemClicked')">
       {{ page.label }}
     </nuxt-link>
     <nuxt-link

@@ -1,14 +1,5 @@
 <script>
 export default {
-  render(createElement) {
-    return createElement(
-      'h' + this.level,
-      {
-        class: `heading ${this.asClass}`
-      },
-      this.$slots.default
-    )
-  },
   props: {
     level: {
       type: Number,
@@ -24,6 +15,15 @@ export default {
     asClass() {
       return this.as ? this.as : `h${this.level}`
     }
+  },
+  render(createElement) {
+    return createElement(
+      'h' + this.level,
+      {
+        class: `heading ${this.asClass}`
+      },
+      this.$slots.default
+    )
   }
 }
 </script>

@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <div>
-      <Heading :level="1" as="h2" class="my-5">i18n + Tailwind + Colormode</Heading>
+      <Heading :level="1" as="h2" class="my-5">
+        i18n + Tailwind + Colormode
+      </Heading>
       <Btn :to="localePath('sample')" class="mb-4">
         {{ $t('welcome') }}
       </Btn>
