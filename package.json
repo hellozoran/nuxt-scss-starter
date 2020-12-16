@@ -16,7 +16,8 @@
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "nuxt-i18n": "^6.15.4",
-    "nuxt-mq": "^2.0.1"
+    "nuxt-mq": "^2.0.1",
+    "vuelidate": "^0.7.6"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.0.0",
