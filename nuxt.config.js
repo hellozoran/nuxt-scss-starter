@@ -24,7 +24,9 @@ export default {
     ]
   },
 
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/vuelidate' }
+  ],
 
   components: true,
 

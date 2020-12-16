@@ -1,9 +1,9 @@
 <script>
 export default {
   render(createElement) {
-    return createElement('div', 
+    return createElement('div',
       {
-        class: [`container`, 'mx-auto']
+        class: ['container', 'mx-auto']
       },
       this.$slots.default
     )
