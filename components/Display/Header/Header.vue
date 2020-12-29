@@ -1,12 +1,14 @@
 <template>
-  <div class="header-wrapper">
-    <header class="header dark:bg-gray-900">
-      <RouterLink :to="localePath('index')">
-        <Logo class="logo" />
-      </RouterLink>
-      <HamburgerIcon :is-open="isOpen" @toggle="toggleMenu" />
-      <Nav :is-open="isOpen" @itemClicked="closeMenu" />
-    </header>
+  <div class="header-wrapper dark:bg-gray-900">
+    <Container>
+      <header class="header">
+        <RouterLink :to="localePath('index')">
+          <Logo class="logo" />
+        </RouterLink>
+        <HamburgerIcon :is-open="isOpen" @toggle="toggleMenu" />
+        <Nav :is-open="isOpen" @itemClicked="closeMenu" />
+      </header>
+    </Container>
   </div>
 </template>
 
@@ -33,7 +35,6 @@ export default {
 <style lang="scss" scoped>
 .header {
   @apply
-    px-10
     py-6
     flex
     items-center

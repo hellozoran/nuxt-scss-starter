@@ -1,4 +1,9 @@
 {
   "welcome": "Hola!",
-  "copyright_text": "Todos los derechos reservados."
+  "copyright_text": "Todos los derechos reservados.",
+  "form": {
+    "name": "El Name-o",
+    "email": "Email",
+    "submit": "Validate form"
+  }
 }

@@ -8,12 +8,6 @@
       @click.native="$emit('itemClicked')">
       {{ page.label }}
     </nuxt-link>
-    <nuxt-link
-      v-for="locale in $i18n.locales"
-      :key="locale.code"
-      :to="switchLocalePath(locale.code)">
-      {{ locale.name }}
-    </nuxt-link>
     <ColorSwitcher />
   </nav>
 </template>
@@ -30,7 +24,8 @@ export default {
     return {
       nav: [
         { label: 'Home', to: 'index' },
-        { label: 'Sample page', to: 'sample' }
+        { label: 'Vuelidate', to: 'vuelidate' },
+        { label: 'UI', to: 'ui' }
       ]
     }
   }

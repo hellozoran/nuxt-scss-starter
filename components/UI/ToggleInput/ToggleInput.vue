@@ -1,11 +1,11 @@
 <template>
   <span
+    :aria-checked="value.toString()"
     class="toggle"
     role="checkbox"
     tabindex="0"
     @click="toggle"
-    @keydown.space.prevent="toggle"
-    :aria-checked="value.toString()" />
+    @keydown.space.prevent="toggle" />
 </template>
 
 <script>
@@ -14,7 +14,12 @@ export default {
     prop: 'value',
     event: 'toggle'
   },
-  props: ['value'],
+  props: {
+    value: {
+      type: Boolean,
+      required: true
+    }
+  },
   methods: {
     toggle() {
       this.$emit('toggled', !this.toggled)

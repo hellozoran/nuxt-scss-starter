@@ -14,6 +14,7 @@ export default {
 
   css: [
     '~/assets/css/reset.css',
+    '~/assets/css/transitions.css',
     '~/assets/scss/main.scss'
   ],
 
