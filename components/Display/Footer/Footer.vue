@@ -1,5 +1,6 @@
 <template lang="html">
   <footer class="footer dark:bg-gray-900 bg-gray-100 text-xs text-gray-600 dark:text-gray-500">
+    <LanguageSwitcher />
     <div class="container mx-auto">
       &copy; {{ currentYear }}. {{ $t('copyright_text') }}
     </div>

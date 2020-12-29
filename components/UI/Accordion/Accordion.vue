@@ -1,7 +1,7 @@
 <template>
-  <div :class="{ open: open }" @click="togglePanel">
+  <div :class="{ open: open }" @click="open = !open">
     <div class="panel">
-      <div class="panel-title cursor-pointer p-4">
+      <div class="panel-title cursor-pointer p-4 bg-gray-100 dark:bg-gray-900">
         <slot name="title" />
       </div>
       <transition
@@ -10,7 +10,7 @@
         @after-enter="afterEnter"
         @leave="leave">
         <div v-show="open" class="panel-content">
-          <div class="p-2">
+          <div class="p-4">
             <slot name="content" />
           </div>
         </div>
@@ -27,9 +27,6 @@ export default {
     }
   },
   methods: {
-    togglePanel() {
-      this.open = !this.open
-    },
     enter(el) {
       el.style.height = 'auto'
       const height = getComputedStyle(el).height

@@ -1,9 +1,9 @@
 <script>
 export default {
   render(createElement) {
-    return createElement('div', 
+    return createElement('div',
       {
-        class: `flex`
+        class: 'flex'
       },
       this.$slots.default
     )

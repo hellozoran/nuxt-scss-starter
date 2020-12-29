@@ -1,4 +1,12 @@
 {
   "welcome": "Welcome!",
-  "copyright_text": "All rights reserved."
+  "copyright_text": "All rights reserved.",
+  "vuelidate": "Vuelidate",
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Validate form"
+  },
+  "ui_elements": "UI Elements"
 }

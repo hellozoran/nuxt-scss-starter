@@ -2,34 +2,34 @@
   <div class="page">
     <Container>
       <Heading :level="1">
-        {{ $t('welcome') }}
+        {{ $t('vuelidate') }}
       </Heading>
       <form @submit.prevent="submitForm">
         <FormField>
-          <label>Name</label>
-          <input type="text" v-model="name" class="focus:ring-2 focus:ring-indigo-800" />
+          <label>{{ $t('form.name') }}</label>
+          <input v-model="name" type="text" class="focus:ring-2 focus:ring-indigo-800">
           <span v-if="!$v.name.required && $v.name.$dirty" class="text-red-700">Name is required</span>
           <span v-if="!$v.name.alpha && $v.name.$dirty" class="text-red-700">Alpha name is required</span>
         </FormField>
         <FormField>
-          <label>Email</label>
-          <input type="email" v-model="email" />
+          <label>{{ $t('form.email') }}</label>
+          <input v-model="email" type="email">
           <span v-if="(!$v.email.required || !$v.email.email) && $v.email.$dirty" class="text-red-700">Email is required</span>
         </FormField>
         <FormField>
-          <label>Password</label>
-          <input type="password" v-model="password" />
+          <label>{{ $t('form.password') }}</label>
+          <input v-model="password" type="password">
           <span v-if="!$v.password.required && $v.password.$dirty" class="text-red-700">Password is required</span>
         </FormField>
         <FormField>
           <div class="flex items-center flex-row">
-            <ToggleInput :value="acceptTerms" @toggled="acceptTerms = !acceptTerms" class="mr-2" />
+            <ToggleInput :value="acceptTerms" class="mr-2" @toggled="acceptTerms = !acceptTerms" />
             <label>Accept terms</label>
           </div>
           <span v-if="!$v.acceptTerms.required && $v.acceptTerms.$dirty">Required checkbox validation message</span>
         </FormField>
         <Btn @click="submitForm">
-          Send away
+          {{ $t('form.submit') }}
         </Btn>
       </form>
     </Container>

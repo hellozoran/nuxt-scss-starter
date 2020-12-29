@@ -1,7 +1,6 @@
 <template>
   <div class="relative" @mouseover="showMenu" @mouseleave="hideMenu">
-    <a
-      href="#"
+    <div
       class="trigger"
       @focus="showMenu"
       @keydown.shift.tab="hideMenu"
@@ -19,9 +18,9 @@
         class="ml-2">
         <path d="M1 1L5.5 5L10 1" />
       </svg>
-    </a>
+    </div>
     <transition name="dropdown">
-      <div v-show="isVisible" :style="{ width: width }" class="dropdown">
+      <div v-show="isVisible" :style="{ width: width }" class="dropdown bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-800">
         <slot />
       </div>
     </transition>
@@ -59,7 +58,7 @@ export default {
 
 <style lang="scss" scoped>
 .dropdown {
-  @apply absolute bg-white border border-gray-200 shadow-xl rounded-md overflow-hidden z-30;
+  @apply absolute border shadow-xl rounded-md overflow-hidden z-30;
   & /deep/ > div {
     @apply p-6;
   }
@@ -68,12 +67,12 @@ export default {
   }
 }
 .trigger {
-  @apply flex transition-colors duration-100 relative;
+  @apply flex items-center transition-colors duration-100 relative py-2 cursor-pointer;
   &:hover,
   &:focus,
   &:active,
   &.nuxt-link-active {
-    @apply text-gray-900;
+    @apply text-gray-500;
   }
 }
 .dropdown-enter-active,
