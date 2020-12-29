@@ -18,3 +18,11 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+
+### Credits
+
+- @nuxtjs/tailwindcss
+- vuelidate
+- @nuxtjs/color-mode
+- nuxt-i18n
