@@ -47,7 +47,7 @@ export default {
       name: '',
       email: '',
       password: '',
-      acceptTerms: '',
+      acceptTerms: false,
       meta: {
         title: 'Nuxt project starter',
         description: 'Sample meta description',
