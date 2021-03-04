@@ -1,7 +1,12 @@
 {
-  "name": "web-starter",
+  "name": "nuxt-starter",
   "version": "1.0.0",
   "private": true,
+  "config": {
+    "nuxt": {
+      "port": "5000"
+    }
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -16,7 +21,6 @@
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "nuxt-i18n": "^6.15.4",
-    "nuxt-mq": "^2.0.1",
     "vuelidate": "^0.7.6"
   },
   "devDependencies": {

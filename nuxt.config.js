@@ -29,7 +29,11 @@ export default {
     { src: '~/plugins/vuelidate' }
   ],
 
-  components: true,
+  components: [
+    '~/components/Display',
+    '~/components/Layout',
+    '~/components/UI'
+  ],
 
   buildModules: [
     '@nuxtjs/eslint-module',
